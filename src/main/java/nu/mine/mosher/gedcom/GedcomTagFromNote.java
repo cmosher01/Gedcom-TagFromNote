@@ -72,6 +72,9 @@ public class GedcomTagFromNote implements Gedcom.Processor {
                 log().info("Found tag in note: "+value);
             }
             final TreeNode<GedcomLine> parent = node.parent();
+            if (parent == null || parent.getObject() == null) {
+                log().warning("cannot find parent for: "+node);
+            }
             this.newNodes.add(new ChildToBeAdded(parent, new TreeNode<>(parent.getObject().createChild(this.options.cvt, value))));
         }
     }

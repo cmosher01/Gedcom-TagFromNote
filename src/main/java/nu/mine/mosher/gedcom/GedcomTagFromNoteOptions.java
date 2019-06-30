@@ -1,6 +1,5 @@
 package nu.mine.mosher.gedcom;
 
-@SuppressWarnings({"access", "WeakerAccess", "unused"})
 public class GedcomTagFromNoteOptions extends GedcomOptions {
     public String tag;
     public String cvt;
